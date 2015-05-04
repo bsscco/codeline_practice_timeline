@@ -1,0 +1,12 @@
+<h4><%= flash[:alert] %></h4>
+
+<div style="background-color:#e9eaed;">
+  <h1>Edit Post</h1>
+  <form action="/wall/edit_process" method="post">
+    <input type="hidden" name="id" value="<%= @post.id %>">
+    Name: <input type="text" name="writer" value="<%= @post.writer %>"><br>
+    Content: <br>
+    <textarea name="content" cols="40" rows="5"><%= @post.content %></textarea>
+    <input type="submit" value="edit">
+  </form>
+</div>
