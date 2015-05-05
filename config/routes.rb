@@ -4,6 +4,11 @@ Timeline::Application.routes.draw do
   get "wall/posts"
 	get 'wall/edit/:id' => 'wall#edit'
 	post 'wall/edit_process'
+	get 'wall/delete/:id' => 'wall#delete'
+	post 'wall/delete_process'
+	get 'wall/comment/:id' => 'wall#comment'
+	post 'wall/comment_process'
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # See how all your routes lay out with "rake routes".
